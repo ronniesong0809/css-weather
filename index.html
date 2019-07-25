@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <style>
     .weather {
@@ -10,6 +11,7 @@
       background: #1ec4f8;
       border-radius: 8px;
     }
+
     .sunny:before {
       content: "";
       position: absolute;
@@ -23,6 +25,7 @@
       box-shadow: 0 0 30px #ff0;
       z-index: 2;
     }
+
     .sunny:after {
       content: "";
       position: absolute;
@@ -32,36 +35,38 @@
       width: 90px;
       height: 90px;
       background: #fee82b;
-      clip-path: polygon(
-        50% 0%,
-        65.43% 25%,
-        93.3% 25%,
-        78.87% 50%,
-        93.3% 75%,
-        64.43% 75%,
-        50% 100%,
-        35.57% 75%,
-        6.7% 75%,
-        21.13% 50%,
-        6.7% 25%,
-        35.57% 25%
-      );
+      clip-path: polygon(50% 0%,
+          65.43% 25%,
+          93.3% 25%,
+          78.87% 50%,
+          93.3% 75%,
+          64.43% 75%,
+          50% 100%,
+          35.57% 75%,
+          6.7% 75%,
+          21.13% 50%,
+          6.7% 25%,
+          35.57% 25%);
       z-index: 1;
       animation: sunScale 2s linear infinite;
     }
+
     @keyframes sunScale {
       0% {
-          transform: scale(1);
+        transform: scale(1);
       }
+
       50% {
         transform: scale(1.1);
       }
+
       100% {
-          transform: scale(1);
+        transform: scale(1);
       }
     }
+
     .cloudy:before,
-    
+
     .snowy:before {
       content: "";
       position: absolute;
@@ -83,29 +88,57 @@
         #aea4a4 94px -4px 0 -4px;
       z-index: 2;
     }
+
     .cloudy:before {
       animation: cloudMove 2s linear infinite;
     }
+
     @keyframes cloudMove {
       0% {
         transform: translate(-50%, -50%);
       }
+
       50% {
         transform: translate(-50%, -60%);
       }
+
       100% {
         transform: translate(-50%, -50%);
       }
     }
+
     .rainy:after {
       content: "";
       position: absolute;
-      top:50%;
+      top: 50%;
       left: 25%;
       width: 4px;
       height: 14px;
       background: #fff;
       border-radius: 2px;
+    }
+
+    .rainy:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      width: 4px;
+      height: 14px;
+      background: #fff;
+      border-radius: 2px;
+      box-shadow:
+        #fff 25px -10px 0,
+        #fff 50px 0 0,
+        #fff 75px -10px 0,
+        #fff 0 25px 0,
+        #fff 25px 15px 0,
+        #fff 50px 25px 0,
+        #fff 75px 15px 0,
+        #fff 0 50px 0,
+        #fff 25px 40px 0,
+        #fff 50px 50px 0,
+        #fff 75px 40px 0;
     }
   </style>
 </head>
