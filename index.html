@@ -60,11 +60,26 @@
           transform: scale(1);
       }
     }
+    .cloudy:before,
+    .rainy:before,
+    .snowy:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      transform: translate(-50%, -50%);
+      width: 36px;
+      height: 36px;
+      background: #fff;
+      border-radius: 50%;
+      z-index: 2;
+    }
   </style>
 </head>
 
 <body>
   <div class="weather sunny"></div>
+  <div class="weather cloudy"></div>
 </body>
 
 </html>
