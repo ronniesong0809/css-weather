@@ -83,6 +83,20 @@
         #aea4a4 94px -4px 0 -4px;
       z-index: 2;
     }
+    .cloudy:before {
+      animation: cloudMove 2s linear infinite;
+    }
+    @keyframes cloudMove {
+      0% {
+        transform: translate(-50%, -50%);
+      }
+      50% {
+        transform: translate(-50%, -60%);
+      }
+      100% {
+        transform: translate(-50%, -50%);
+      }
+    }
   </style>
 </head>
 
