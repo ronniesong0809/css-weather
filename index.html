@@ -61,7 +61,7 @@
       }
     }
     .cloudy:before,
-    .rainy:before,
+    
     .snowy:before {
       content: "";
       position: absolute;
@@ -97,12 +97,23 @@
         transform: translate(-50%, -50%);
       }
     }
+    .rainy:after {
+      content: "";
+      position: absolute;
+      top:50%;
+      left: 25%;
+      width: 4px;
+      height: 14px;
+      background: #fff;
+      border-radius: 2px;
+    }
   </style>
 </head>
 
 <body>
   <div class="weather sunny"></div>
   <div class="weather cloudy"></div>
+  <div class="weather rainy"></div>
 </body>
 
 </html>
